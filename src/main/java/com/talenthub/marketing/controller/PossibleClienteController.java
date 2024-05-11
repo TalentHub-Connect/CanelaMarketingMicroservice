@@ -1,5 +1,6 @@
 package com.talenthub.marketing.controller;
 
+import com.talenthub.marketing.model.Marketingstatus;
 import com.talenthub.marketing.model.Possibleclient;
 import com.talenthub.marketing.service.PossibleClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +27,12 @@ public class PossibleClienteController {
     public List<Possibleclient> findAll(){
         return possibleClienteService.findAll();
     }
+
+    @CrossOrigin
+    @PostMapping("/saveAll")
+    public List<Possibleclient> saveAll(@RequestBody List<Possibleclient> clientes){
+        return possibleClienteService.saveAll(clientes);
+    }
+
 
 }
