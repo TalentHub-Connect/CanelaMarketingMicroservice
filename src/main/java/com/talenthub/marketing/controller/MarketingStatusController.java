@@ -22,5 +22,17 @@ public class MarketingStatusController {
         return marketingStatusService.findAll();
     }
 
+    @CrossOrigin
+    @PostMapping("/save")
+    public Marketingstatus save(@RequestBody Marketingstatus estado){
+        return marketingStatusService.save(estado);
+    }
+
+    @CrossOrigin
+    @DeleteMapping("/delete/{id}")
+    public Boolean save(@PathVariable Integer id){
+        return marketingStatusService.deleteById(id);
+    }
+
 
 }
