@@ -23,7 +23,7 @@ public class Possibleclient implements Serializable {
     private String nombre;
 
     @Column(name = "phonecontact")
-    private Integer phonecontact;
+    private Long phonecontact;
 
     @Column(name = "menssage")
     private String menssage;
