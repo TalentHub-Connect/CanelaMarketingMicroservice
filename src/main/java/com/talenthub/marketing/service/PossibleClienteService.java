@@ -5,6 +5,8 @@ import com.talenthub.marketing.repository.PossibleClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PossibleClienteService
 {
@@ -17,6 +19,10 @@ public class PossibleClienteService
         possibleCliente.setMarketingstatusid(marketingStatusService.findById(1).getId());
         possibleClienteRepository.save(possibleCliente);
         return possibleCliente;
+    }
+
+    public List<Possibleclient> findAll() {
+        return possibleClienteRepository.findAll();
     }
 }
 
