@@ -5,6 +5,8 @@ import com.talenthub.marketing.repository.MarketingstatusRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MarketingStatusService {
     @Autowired
@@ -13,4 +15,9 @@ public class MarketingStatusService {
     Marketingstatus findById(int id){
         return marketingstatusRepository.findById(id).get();
     }
+
+    public List<Marketingstatus> findAll() {
+        return marketingstatusRepository.findAll();
+    }
+
 }

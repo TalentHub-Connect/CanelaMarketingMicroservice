@@ -1,5 +1,7 @@
 package com.talenthub.marketing.service;
 
+import com.talenthub.marketing.controller.PossibleClienteController;
+import com.talenthub.marketing.model.Marketingstatus;
 import com.talenthub.marketing.model.Possibleclient;
 import com.talenthub.marketing.repository.PossibleClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,10 @@ public class PossibleClienteService
 
     public List<Possibleclient> findAll() {
         return possibleClienteRepository.findAll();
+    }
+
+    public List<Possibleclient> saveAll(List<Possibleclient> clientes) {
+        return possibleClienteRepository.saveAll(clientes);
     }
 }
 
